@@ -1,0 +1,14 @@
+.l-side
+    .search-sort
+      .select-wrap
+        %select{name: :sort_order, class: 'sort_order'}
+          %option{value: "location.pathname", name: "location.pathname"}
+            並び替え
+          %option{value: "name_asc"}
+            五十音逆順
+          %option{value: "name_desc"}
+            五十音順
+          %option{value: "old_asc"}
+            年齢(高)
+          %option{value: "old_desc"}
+            年齢(低)

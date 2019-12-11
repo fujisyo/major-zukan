@@ -1,0 +1,26 @@
+.header
+  .header__image
+    .header__logo
+      MLB
+    .header__form
+      .header__form__text
+        = form_tag("/players/search", method: :get, class: 'search-form') do
+          %input.search-form__input{name: "keyword", placeholder: "選手名を入力してください", type: "text", value: ""}
+          %button.btn-search{title: "検索", type: "submit"}
+            = fa_icon "search",class: "search-form__icon"
+.side
+  .side__menu
+    = form_tag('players/search', method: :get, class: 'search-form__text') do
+      %input.search-form__input{name: "keyword", placeholder: "何をお探しですか？", type: "text", value: ""}
+      %button.btn-search{title: "検索", type: "submit"}
+        = fa_icon "search",class: "search-form__icon"
+  .main
+    .main__text
+      %ul.main__box
+        - if @players
+          - @players.each do |p|
+            %li.main__text__image
+              = image_tag p.image.to_s, size: "200x200", alt: "test"
+              = link_to p.name, "/players/#{p.id}"
+                
+

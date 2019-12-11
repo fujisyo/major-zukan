@@ -1,0 +1,33 @@
+.main__show{
+  display: flex;
+  .main__show__image{
+  padding: 20px ;
+  }
+    .main__show__name {
+      width: 600px;
+      text-align: center;
+      font-size: 30px;
+      padding-bottom: 20px;
+      color: cornsilk;
+    }
+  .main__table{
+    padding-top: 50px;
+    table {
+      width: 600px;
+      height: 140px;
+      padding: 10px; 
+      background-color: white; 
+      color: black;
+      tbody{
+        border:black;
+        th{
+          text-align: center;
+          width: 150px;
+        }
+        td{
+          text-align: center;
+        }
+      }
+    }
+  }    
+}

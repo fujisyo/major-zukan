@@ -1,0 +1,33 @@
+.header
+  .header__image
+    .header__logo
+      =link_to "MLB", "/"
+    .header__form
+      .header__form__text
+        = form_for ('@players') do |f|   
+          = f.text_field :name, placeholder: "選手名を入力してください", class: "player__text"
+          = f.submit '検索する', class: "search__player"
+.side
+  .side__menu
+  -# = form_for ('@players') do |f|
+  -# = f.select プロパティ名, 選択肢の配列
+    並べ替え
+  .main
+    .main__show
+      .main__show__image
+        = image_tag @player.image, size: '600x550'
+      .main__table
+        .main__show__name
+          = @player.name
+          = "(#{@player.age})"
+        %table{border: "1"}
+          %tbody
+            %tr
+              %th 所属
+              %th ポジション 
+              %th 防御率or打率
+              %th 出身国
+            %td 球団
+            %td #{@player.position}
+            %td 成績
+            %td #{@player.from}
