@@ -1,6 +1,7 @@
 .header
   =render 'header'
-
+.new__player
+  .new__player__title 選手登録ページ
   = form_for @player do |f|
-    .new__player__name
-      = f.text_field :name, placeholder:'選手名を入力してください',class:'new__player__name__text'
+    .new__player__title__name
+      = f.text_field :name, placeholder:'選手名を入力してください',class:'new__player__title__name__text'

@@ -1,11 +1,25 @@
-.new__player__name{
+.new__player{
   height: 100vh;
-  
-  &__text{
-    padding: 10px 0;
-    margin: 15px;
-    width: 600px;
+  width: 100vw;
+  &__title{
+    width: 300px;
+    margin: 0 auto;
+    height: 50px;
     font-size: 30px;
-    
+    text-align: center;
+    &__name{
+      width: 600px;
+      margin: 0 auto;
+      height: 100vh;
+      &__text{
+        padding: 10px 0;
+        margin: 15px;
+        width: 600px;
+        font-size: 30px;
+        
+      }
+    }
   }
 }
+
+
