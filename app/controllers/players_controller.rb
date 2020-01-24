@@ -4,6 +4,12 @@ class PlayersController < ApplicationController
     @players = Player.where.not(image: "")
     #  = Player.find(params[:id])
   end
+  def new
+    @player = Player.new
+  end
+
+  def create
+  end
 
   def show
     @player = Player.find(params[:id])

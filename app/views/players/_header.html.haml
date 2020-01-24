@@ -4,7 +4,4 @@
       MLB
     .header__form
       .header__form__text
-        = form_tag("/players/search", method: :get, class: 'search-form') do
-          %input.search-form__input{name: "keyword", placeholder: "選手名を入力してください", type: "text", value: ""}
-          %button.btn-search{title: "検索", type: "submit"}
-            = fa_icon "search",class: "search-form__icon"
+        = link_to "選手を登録する",new_player_path
