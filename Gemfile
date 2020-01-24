@@ -57,3 +57,4 @@ gem "pry-rails"
 gem 'carrierwave'
 gem 'font-awesome-rails'
 gem "jquery-rails"
+gem 'devise' 
