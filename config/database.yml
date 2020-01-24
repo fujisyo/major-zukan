@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: major-zukan_production
-  username: major-zukan
-  password: <%= ENV['MAJOR-ZUKAN_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
