@@ -67,3 +67,5 @@ gem 'carrierwave'
 gem 'font-awesome-rails'
 gem "jquery-rails"
 gem 'devise' 
+gem 'fog-aws'
+gem 'carrierwave'
