@@ -9,8 +9,8 @@
   .main
     .main__text
       %ul.main__box
-        - if @players
-          - @players.each do |p|
+        - if @player
+          - @player.each do |p|
             %li.main__text__image
               = image_tag p.image.to_s, size: "200x200", alt: "test"
               = link_to p.name, "/players/#{p.id}"

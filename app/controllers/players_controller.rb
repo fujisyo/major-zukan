@@ -1,14 +1,18 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.where.not(name: "")
-    @players = Player.where.not(image: "")
+    @player = Player.where.not(name: "")
+    @player = Player.where.not(image: "")
     #  = Player.find(params[:id])
   end
   def new
     @player = Player.new
+    
   end
 
   def create
+    # binding.pry
+    @player = Player.create(player_params)
+      redirect_to root_path
   end
 
   def show
@@ -27,6 +31,11 @@ class PlayersController < ApplicationController
       @players = Player.order(sort)
     end
 
+  end
+  private
+
+  def player_params
+    params.require(:player).permit(:name,:image,:age,:position,:from)
   end
  
 end
