@@ -60,8 +60,8 @@ server '3.113.102.28', user: 'ec2-user', roles: %w{app db web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-if ENV["RAILS_LOG_TO_STDOUT"].present?
-  logger           = ActiveSupport::Logger.new(STDOUT)
-  logger.formatter = config.log_formatter
-  config.logger    = ActiveSupport::TaggedLogging.new(logger)
-end
+# if ENV["RAILS_LOG_TO_STDOUT"].present?
+#   logger           = ActiveSupport::Logger.new(STDOUT)
+#   logger.formatter = config.log_formatter
+#   config.logger    = ActiveSupport::TaggedLogging.new(logger)
+# end
