@@ -12,6 +12,7 @@ class PlayersController < ApplicationController
   def create
     # binding.pry
     @player = Player.new(player_params)
+    logger.debug @player.errors.inspect
     if @player.save
       redirect_to action: :index
     else
