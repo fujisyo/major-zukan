@@ -12,7 +12,6 @@
         - if @player
           - @player.each do |p|
             %li.main__text__image
-              = image_tag p.image.to_s, size: "200x200", alt: "test"
               = link_to p.name, "/players/#{p.id}"
                 
 
