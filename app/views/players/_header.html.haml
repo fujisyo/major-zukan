@@ -1,7 +1,7 @@
 .header
   .header__image
-    .header__logo
-      = link_to 'MLB',root_path
-    .header__form
-      .header__form__text
-        = link_to "投稿する",new_tweets_path
+    .header__image__logo
+      = link_to 'MLBNETWORK',root_path,class:'mlb'
+    .header__image__form
+      = link_to "投稿する",new_tweet_path,class:'link'
+      = link_to "新規登録",new_user_registration_path,class:'link'

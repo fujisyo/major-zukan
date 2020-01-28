@@ -1,37 +1,38 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 .header {
   background-color:black;
   height: 150px;
+  &__image{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
     &__logo {
       color: white;
       font-family: 'Impact';
-      font-size: 50px;
-      text-align: left;
-      padding-left: 30px;
-      padding-top: 20px;
+      font-size: 70px;
       letter-spacing: 5px;
       color: cornsilk;
-      a {
-        text-decoration: none;
+      line-height: 1;
+      padding: 20px 0;
+      .mlb {
         color: cornsilk;
       }
-      
-      
     }
     &__form{
-    
-    
-    }
-    &__form__text{
-      padding-left: 20px;
-      .search-form__input{
-        width: 200px;
-        
-      }
+      text-align: right;
+      .link{
+        color: white;
+        font-size: 20px;
+        letter-spacing: 5px;
+        padding-left: 10px;
       }
     }
+  }
+}
   
 
 
