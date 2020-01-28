@@ -1,0 +1,31 @@
+.header {
+  background-color:black;
+  height: 150px;
+  &__image{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    &__logo {
+      color: white;
+      font-family: 'Impact';
+      font-size: 70px;
+      letter-spacing: 5px;
+      color: cornsilk;
+      line-height: 1;
+      padding: 20px 0;
+      .mlb {
+        color: cornsilk;
+      }
+    }
+    &__form{
+      text-align: right;
+      .link{
+        color: white;
+        font-size: 20px;
+        letter-spacing: 5px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
