@@ -2,6 +2,7 @@
   = render 'players/header'
 
 .tmain
+  .tmain__title 最新の投稿
   .tmain__box
     -if @tweets
       -@tweets.each do |t|
@@ -9,7 +10,6 @@
           .tmain__box__tweet__image
             = image_tag t.image.to_s,size: "109x100", alt: "test"
           .tmain__box__tweet__text 
-            = t.text
-            = link_to 'もっと見る＞', '#',class: 'tmain__box__tweet__text__link' 
-          .tmain__box__tweet__name 
             = t.name
+            = link_to 'もっと見る＞',"/tweets/#{t.id}",class: 'tmain__box__tweet__text__link' 
+          .tmain__box__tweet__name 
