@@ -7,7 +7,7 @@
       -@tweets.each do |t|
         .tmain__box__tweet
           .tmain__box__tweet__image
-            = image_tag t.image.to_s
+            = image_tag t.image.to_s,size: "109x100", alt: "test"
           .tmain__box__tweet__text 
             = t.text
             = link_to 'もっと見る＞', '#',class: 'tmain__box__tweet__text__link' 
