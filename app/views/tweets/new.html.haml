@@ -1,3 +1,9 @@
+.header 
+  = render 'players/header'
+.nmain 
+  .nmain__title 投稿する
+  .nmain__box
+    = form_for @tweet do |f|
       = f.text_field :name, placeholder: 'title',class:'nmain__box__name'
       = f.file_field :image,class:'nmain__box__image'
       = f.text_area :text, placeholder: "text",class:'nmain__box__text'
