@@ -11,11 +11,11 @@
     width: calc(100vw - 300px);
     margin: 0 auto;
     background-color: grey;
-    padding: 20px 0;
+    padding: 10px 0;
     &__tweet{
       height: 100px;
       width: calc(100vw - 350px);
-      margin: 0 auto;
+      margin: 30px auto;
       background-color: aqua;
       display: flex;
       &__image{

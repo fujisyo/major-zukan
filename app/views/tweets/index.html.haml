@@ -3,10 +3,13 @@
 
 .tmain
   .tmain__box
-    .tmain__box__tweet
-      .tmain__box__tweet__image
-      .tmain__box__tweet__text 
-        hon
-        = link_to 'もっと見る＞', '#',class: 'tmain__box__tweet__text__link' 
-      .tmain__box__tweet__name 
-        harry
+    -if @tweets
+      -@tweets.each do |t|
+        .tmain__box__tweet
+          .tmain__box__tweet__image
+            = image_tag t.image.to_s
+          .tmain__box__tweet__text 
+            = t.text
+            = link_to 'もっと見る＞', '#',class: 'tmain__box__tweet__text__link' 
+          .tmain__box__tweet__name 
+            = t.name
