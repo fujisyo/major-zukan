@@ -17,6 +17,26 @@
       width: calc(100vw - 350px);
       margin: 0 auto;
       background-color: aqua;
+      display: flex;
+      &__image{
+        height: 100%;
+        width: 10%;
+      }
+      &__text{
+        height: 100%;
+        width: 80%;
+        position: relative;
+        &__link{
+          color: white;
+          position: absolute;
+          right: 1%;
+          bottom: 10%;
+        }
+      }
+      &__name{
+        height: 100%;
+        width: 10%;
+      }
     }
   }
 }
