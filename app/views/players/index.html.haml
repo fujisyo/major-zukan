@@ -2,10 +2,6 @@
   = render 'header'
 .side
   .side__menu
-    = form_tag('players/search', method: :get, class: 'search-form__text') do
-      %input.search-form__input{name: "keyword", placeholder: "何をお探しですか？", type: "text", value: ""}
-      %button.btn-search{title: "検索", type: "submit"}
-        = fa_icon "search",class: "search-form__icon"
   .main
     .main__text
       %ul.main__box

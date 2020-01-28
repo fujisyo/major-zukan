@@ -1,4 +1,21 @@
 class TeamsController < ApplicationController
+# require 'json'
+# require 'net/https'
+# require "uri"
+
+
+
+# data={
+#   "keyid": "55318324522d470f802f1102b9a7d90c",
+# }
+
+# query=data.to_query
+# uri = URI("https://api.sportsdata.io/v3/mlb/scores/json/AllTeams/?"+query)
+# http = Net::HTTP.new(uri.host, uri.port)
+# http.use_ssl = true
+# req = Net::HTTP::Get.new(uri)
+# res = http.request(req)
+# # result = JSON.parse(responder) 
   def index
   end
   def search
@@ -15,3 +32,6 @@ class TeamsController < ApplicationController
     end
   end
 end
+
+
+
