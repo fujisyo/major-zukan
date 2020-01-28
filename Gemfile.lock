@@ -85,6 +85,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     excon (0.71.1)
     execjs (2.7.0)
@@ -276,10 +278,11 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
+  erb2haml
   fog-aws
   font-awesome-rails
   font-awesome-sass
-  haml-rails (>= 1.0, <= 2.0.1)
+  haml-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
