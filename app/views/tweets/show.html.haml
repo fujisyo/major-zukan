@@ -2,5 +2,9 @@
   = render 'header_show'
 .umain
   .umain__title
-    
   .umain__box
+    .umain__box__image
+      = image_tag @tweet.image.to_s,size: '400x600'
+    .umain__box__text
+      .umain__box__text__title
+        =@tweet.name
