@@ -7,12 +7,14 @@
     -if @tweets
       -@tweets.each do |t|
         .tmain__box__tweet
-          .tmain__box__tweet__image
-            = image_tag t.image.to_s,size: "109x100", alt: "test"
-          .tmain__box__tweet__text 
-            = t.name
-            = link_to 'もっと見る＞',"/tweets/#{t.id}",class: 'tmain__box__tweet__text__link' 
-          .tmain__box__tweet__name 
-            %i.fa.fa-smile-o
-            = link_to t.user.nickname,root_path,class:"tmain__box__tweet__name__link"
-            
+          = link_to "/tweets/#{t.id}",class: "show__link" do
+            .tmain__box__tweet__image
+              = image_tag t.image.to_s,size: "109x100", alt: "test"
+            .tmain__box__tweet__text 
+              = t.name
+              = link_to 'もっと見る＞',"/tweets/#{t.id}",class: 'tmain__box__tweet__text__link' 
+            =link_to root_path, class:"tmain__box__tweet__name" do
+              %i.fa.fa-smile-o
+              .tmain__box__tweet__name__link
+              = t.user.nickname
+              
