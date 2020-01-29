@@ -13,5 +13,6 @@
             = t.name
             = link_to 'もっと見る＞',"/tweets/#{t.id}",class: 'tmain__box__tweet__text__link' 
           .tmain__box__tweet__name 
-            = fa_icon 'fa-smile', class: 'icon'
-            = link_to t.user.nickname,root_path
+            %i.fa.fa-smile-o
+            = link_to t.user.nickname,root_path,class:"tmain__box__tweet__name__link"
+            
