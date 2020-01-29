@@ -27,7 +27,33 @@
       &__title{
         text-align: center;
         padding: 10px 0;
+        font-size: 40px;
+        background-color: white;
+        border-bottom: 1px solid black;
+      }
+      &__content{
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
         font-size: 30px;
+      }
+      &__name{
+        text-align: right;
+        display: flex;
+        width: 100%;
+        border-top: 1px solid black;
+        &__person{
+          width: 12%;
+          padding: 10px;
+          font-size: 20px;
+        }
+        &__nickname{
+          font-size: 30px;
+          line-height: 50px;
+          width: 88%;
+          text-align: left;
+        }
       }
     }
   }
