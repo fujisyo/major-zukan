@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
     Comment.create(comment_params)
-    redirect_to tweet_comments_path(comment.tweet.id) # コメントと結びつくツイートの詳細画面に遷移する
+    redirect_to root_path # コメントと結びつくツイートの詳細画面に遷移する
   end
 
   private
