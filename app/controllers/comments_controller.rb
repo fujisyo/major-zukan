@@ -1,8 +1,12 @@
 class CommentsController < ApplicationController
   def create
-    Comment.create(comment_params)
-    redirect_to root_path # コメントと結びつくツイートの詳細画面に遷移する
+    @comment = Comment.create(comment_params)
+    respond_to do |format|
+      format.html {redirect_to root_path} # コメントと結びつくツイートの詳細画面に遷移する
+      format.json 
+    end
   end
+    
 
   private
   def comment_params

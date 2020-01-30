@@ -114,15 +114,16 @@
         font-size: 30px;
       }
       &__content{
-        display: flex;
         width: 62%;
         margin: 0 auto;
-        padding: 5px 0;
         &__name{
           font-size: 20px;
-        }
-        &__message{
-          margin-left: 10px;
+          text-align: left;
+          padding: 5px 0;
+          &__user{
+            color: mediumblue;
+            padding-right: 10px;
+          }
         }
       }
     }

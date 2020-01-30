@@ -27,13 +27,12 @@
     .umain__comment__title
       .umain__comment__title__text
         コメント一覧
-      -if @comments
-        - @comments.each do |comment|
-          .umain__comment__title__content
-            .umain__comment__title__content__name
-              =link_to comment.user.nickname, "/users/#{comment.user_id}" 
-            .umain__comment__title__content__message
-              = comment.text
+        .umain__comment__title__content
+          -if @comments
+            - @comments.each do |comment|
+              .umain__comment__title__content__name
+                =link_to comment.user.nickname, "/users/#{comment.user_id}",class:"umain__comment__title__content__name__user"
+                = comment.text
 
 
 
