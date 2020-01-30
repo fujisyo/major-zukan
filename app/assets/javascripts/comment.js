@@ -4,7 +4,9 @@ $(function(){
                   <a class="umain__comment__title__content__name__user" href=/users/${comment.user_id}>${comment.user_name}</a>
                   <div class="umain__content__title__content__name__text">
                     ${comment.text}
-                    ${comment.created_at}
+                    <div class="umain__comment__title__content__name__text__time">
+                      ${comment.created_at}
+                    </div>
                   </div>
                 </div>`
     return html;
