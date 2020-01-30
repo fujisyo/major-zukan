@@ -18,7 +18,7 @@
     -if current_user
       .umain__comment__field
         = form_for([@tweet, @comment]) do |f|
-          = f.text_area :text,placeholder: "コメントする" 
+          = f.text_area :text,placeholder: "コメントする",class: "umain__comment__field__text"
           = f.submit "送信する",class:"umain__comment__field__submit"
     - else
       .umain__comment__nouser
@@ -29,8 +29,11 @@
         コメント一覧
       -if @comments
         - @comments.each do |comment|
-          =link_to comment.user.nickname, "/users/#{comment.user_id}"
-          = comment.text
+          .umain__comment__title__content
+            .umain__comment__title__content__name
+              =link_to comment.user.nickname, "/users/#{comment.user_id}" 
+            .umain__comment__title__content__message
+              = comment.text
 
 
 
