@@ -32,7 +32,10 @@
             - @comments.each do |comment|
               .umain__comment__title__content__name
                 =link_to comment.user.nickname, "/users/#{comment.user_id}",class:"umain__comment__title__content__name__user"
-                = comment.text
+                .umain__comment__title__content__name__text
+                  = comment.text
+                  .umain__comment__title__content__name__text__time
+                    = comment.created_at.strftime("%Y/%m/%d %H:%M")
 
 
 

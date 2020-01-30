@@ -118,15 +118,23 @@
         margin: 0 auto;
         border: 1px solid black;
         height: 370%;
-        
+        overflow-y: scroll;
         &__name{
           font-size: 20px;
           text-align: left;
           padding: 5px 0;
+          display: flex;
           &__user{
             color: mediumblue;
-            padding-right: 10px;
+            padding: 0 10px;
           }
+          &__text{
+            &__time{
+              font-size: 15px;
+              margin-top: 10px;
+            }
+          }
+          
         }
       }
     }

@@ -2,7 +2,10 @@ $(function(){
   function buildHTML(comment){
     var html = `<div class="umain__comment__title__content__name">
                   <a class="umain__comment__title__content__name__user" href=/users/${comment.user_id}>${comment.user_name}</a>
-                  ${comment.text}
+                  <div class="umain__content__title__content__name__text">
+                    ${comment.text}
+                    ${comment.created_at}
+                  </div>
                 </div>`
     return html;
   }
