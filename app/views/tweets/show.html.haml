@@ -15,14 +15,22 @@
         .umain__box__text__name__nickname
           =link_to @tweet.user.nickname,root_path,class:"umain__box__text__name__nickname__link"
   .umain__comment
-    .umain__comment__field
     -if current_user
-      = form_for([@tweet, @comment]) do |f|
-        = f.text_area :text,placeholder: "コメントする" 
-        = f.submit "送信する"
+      .umain__comment__field
+        = form_for([@tweet, @comment]) do |f|
+          = f.text_area :text,placeholder: "コメントする" 
+          = f.submit "送信する",class:"umain__comment__field__submit"
+    - else
+      .umain__comment__nouser
+        %strong.umain__comment__nouser__text
+          ※※※ コメントの投稿には新規登録/ログインが必要です ※※※ 
     .umain__comment__title
       .umain__comment__title__text
         コメント一覧
+      -if @comments
+        - @comments.each do |comment|
+          =link_to comment.user.nickname, "/users/#{comment.user_id}"
+          = comment.text
 
 
 
