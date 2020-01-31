@@ -83,10 +83,21 @@
       &__menu{
         width: 20%;
         text-align: center;
+        &__title{
+          font-size: 25px;
+          width: 90%;
+          margin: 15px auto;
+          background: ghostwhite;
+          border-radius: 40px;
+          border: 1px solid black;
+        }
         &__list{
-          height: 10%;
-          line-height: 40px;
-          font-size: 20px;
+          width: 90%;
+          margin: 0 auto;
+          border: 1px solid;
+          background: honeydew;
+          margin-bottom: 10px;
+          border-radius: 10px;
         }
       }
       &__article{
