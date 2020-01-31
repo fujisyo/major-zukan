@@ -98,7 +98,26 @@
           background: honeydew;
           margin-bottom: 10px;
           border-radius: 10px;
+          &__link{
+            color: brown;
+            &:hover{
+              opacity: 50%;
+            }
+          }
         }
+          &__player{
+            font-size: 15px;
+            height: 10%;
+            width: 50%;
+            margin: 0 auto;
+            &__link{
+              color: black;
+              font-size: 20px;
+              &:hover{
+                border-bottom: 1px solid aqua;
+              }
+            }
+          }
       }
       &__article{
         // height: 100%;

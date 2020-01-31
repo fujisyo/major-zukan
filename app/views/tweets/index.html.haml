@@ -30,8 +30,14 @@
         .pmain__sidebar__menu__title
           MLB球団
         .pmain__sidebar__menu__list
-          = link_to "アメリカンリーグ",root_path            
+          = link_to "アメリカンリーグ",root_path,class:"pmain__sidebar__menu__list__link"            
         .pmain__sidebar__menu__list
-          = link_to "ナショナルリーグ",root_path
+          = link_to "ナショナルリーグ",root_path,class:"pmain__sidebar__menu__list__link"
+        .pmain__sidebar__menu__title
+          個人成績
+        .pmain__sidebar__menu__player
+          =link_to "野手",root_path,class:"pmain__sidebar__menu__player__link"
+          ・
+          =link_to "投手",root_path,class:"pmain__sidebar__menu__player__link"
       .pmain__sidebar__article
               
