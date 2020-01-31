@@ -77,10 +77,21 @@
     }
     &__sidebar{
       height: 100%;
+      width: 100%;
       background-color: lightslategrey;
+      display: flex;
+      &__menu{
+        width: 20%;
+        text-align: center;
+        &__list{
+          height: 10%;
+          line-height: 40px;
+          font-size: 20px;
+        }
+      }
       &__article{
-        height: 100%;
-        width: calc(100vw - 300px);
+        // height: 100%;
+        width: 100%;
         background-color: lightcoral;
         float: right;
       }
