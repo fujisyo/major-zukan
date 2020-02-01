@@ -33,14 +33,11 @@ $(function(){
       alert('コメントできません');
     });
   });
-  if (location.pathname.match()){ //もし現在のURLパスがindexアクションだったら（http://localhost:3000/fruitsもしくはhttp://localhost:3000）
-    setInterval(reloadMessages, 7000);//5000ミリ秒ごとにupdateという関数を実行する
-  }
-  var reloadMessages = function() { 
-    if($('.umain__comment__title__content__name')[0]){
-      var last_comment_id = $(".umain__comment__title__content__name").last().data("message-id")
+  var reloadComments = function() { 
+    if(window.location.href.match(/\/tweets\/comments\/\d+/)){
+      last_comment_id = $(".umain__comment__title__content__name").last().data("comment-id")
       $.ajax({
-        url: location.href,
+        url: 'api/comments',
         type: 'GET',
         dataType: 'json',
         data: {id: last_comment_id}
@@ -56,9 +53,10 @@ $(function(){
         }
       })
       .fail(function() {
-        alert('error');
+        alert("更新できませんでした");
       });
     }
   }
+  setInterval(reloadComments, 7000);
   
 })
