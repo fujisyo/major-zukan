@@ -30,14 +30,17 @@ $(function(){
       $('.umain__comment__field__submit').prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert('コメントできません');
     });
   });
+  if (location.pathname.match()){ //もし現在のURLパスがindexアクションだったら（http://localhost:3000/fruitsもしくはhttp://localhost:3000）
+    setInterval(reloadMessages, 7000);//5000ミリ秒ごとにupdateという関数を実行する
+  }
   var reloadMessages = function() { 
-    if(window.location.href.match(/\/tweets\/\d+\/comments/)){
-      last_comment_id = $(".umain__comment__title__content__name").last().data("message-id")
+    if($('.umain__comment__title__content__name')[0]){
+      var last_comment_id = $(".umain__comment__title__content__name").last().data("message-id")
       $.ajax({
-        url: 'api/comments',
+        url: location.href,
         type: 'GET',
         dataType: 'json',
         data: {id: last_comment_id}
@@ -47,16 +50,15 @@ $(function(){
         $.each(comments, function(i, comment){
           insertHTML += buildHTML(comment)
         });
-        // if (comments.length != 0){
+        if (comments.length != 0){
         $('.umain__comment__title__content__name').append(insertHTML);
-        $('.umain__comment__title__content__name').animate({scrollBootom: $('.umain__comment__title__content__name')[0].scrollHeight});
-        // }
+        $('.umain__comment__title__content__name').animate({scrollTop: $('.umain__comment__title__content__name')[0].scrollHeight});
+        }
       })
       .fail(function() {
         alert('error');
       });
     }
-
-}
-  setInterval(reloadMessages, 7000);
+  }
+  
 })

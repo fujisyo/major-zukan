@@ -1,4 +1,10 @@
 class CommentsController < ApplicationController
+
+  def index
+    tweet = Tweet.find(params[:tweet_id])
+    last_comment_id = params[:id].to_i
+    @comments = tweet.comments.includes(:user).where("id > ?", last_comment_id)
+  end
   def create
     @comment = Comment.create(comment_params)
     respond_to do |format|
