@@ -82,6 +82,7 @@
       width: 100%;
       background-color: lightslategrey;
       display: flex;
+      @include scroll;
       &__menu{
         width: 20%;
         text-align: center;
