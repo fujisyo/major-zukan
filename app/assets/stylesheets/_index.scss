@@ -130,7 +130,7 @@
         background-color: lightcoral;
         float: right;
         &__title{
-          // @include scroll;
+          @include scroll;
           height: 170px;
           width: 50%;
           margin: 20px auto;

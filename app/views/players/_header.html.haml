@@ -1,11 +1,11 @@
-.header
-  .header__image
-    .header__image__logo
-      = link_to 'MLBNETWORK',root_path,class:'mlb'
-    .header__image__form
-      -if user_signed_in? 
-        = link_to "投稿する",new_tweet_path,class:'link'
-        = link_to "ログアウト",destroy_user_session_path, method: :delete,class:'link'
-      - else
-        = link_to "ログイン",user_session_path,class: 'link'
-        = link_to "新規登録",new_user_registration_path,class:'link'
+
+.header__image
+  .header__image__logo
+    = link_to 'MLBNETWORK',root_path,class:'mlb'
+  .header__image__form
+    -if user_signed_in? 
+      = link_to "投稿する",new_tweet_path,class:'link'
+      = link_to "ログアウト",destroy_user_session_path, method: :delete,class:'link'
+    - else
+      = link_to "ログイン",user_session_path,class: 'link'
+      = link_to "新規登録",new_user_registration_path,class:'link'
