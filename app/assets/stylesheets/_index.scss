@@ -82,7 +82,6 @@
       width: 100%;
       background-color: lightslategrey;
       display: flex;
-      @include scroll;
       &__menu{
         width: 20%;
         text-align: center;
@@ -93,6 +92,7 @@
           background: ghostwhite;
           border-radius: 40px;
           border: 1px solid black;
+          @include scroll;
         }
         &__list{
           width: 90%;
@@ -101,6 +101,7 @@
           background: honeydew;
           margin-bottom: 10px;
           border-radius: 10px;
+          @include scroll;
           &__link{
             color: brown;
             &:hover{
@@ -113,6 +114,7 @@
             height: 10%;
             width: 50%;
             margin: 0 auto;
+            @include scroll;
             &__link{
               color: black;
               font-size: 20px;

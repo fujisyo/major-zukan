@@ -26,12 +26,35 @@ $(function(){
       }
     });
   });
+  
   $(window).scroll(function(){
-    $('.pmain__sidebar').each(function(){
+    $('.pmain__sidebar__menu__title').each(function(){
       var targetElement = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight + 600){
+      if (scroll > targetElement - windowHeight + 550){
+        $(this).css('opacity','1');
+        $(this).css('transform','translateY(0)');
+      }
+    });
+  });
+  $(window).scroll(function(){
+    $('.scroll-american').each(function(){
+      var targetElement = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight + 570){
+        $(this).css('opacity','1');
+        $(this).css('transform','translateY(0)');
+      }
+    });
+  });
+  $(window).scroll(function(){
+    $('.scroll-nasyonal').each(function(){
+      var targetElement = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight + 585){
         $(this).css('opacity','1');
         $(this).css('transform','translateY(0)');
       }
