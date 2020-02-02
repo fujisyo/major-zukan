@@ -1,27 +1,27 @@
 .header {
-  background-color:black;
+  background-color:white;
   height: 150px;
+  width: 95%;
+  margin: 0 auto;
   &__image{
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     height: 100%;
     &__logo {
       color: white;
       font-family: 'Impact';
       font-size: 70px;
       letter-spacing: 5px;
-      color: cornsilk;
       line-height: 1;
       padding: 20px 0;
       .mlb {
-        color: cornsilk;
+        color: black;
       }
     }
     &__form{
       text-align: right;
       .link{
-        color: white;
+        color: black;
         font-size: 20px;
         letter-spacing: 5px;
         padding-left: 10px;
