@@ -28,7 +28,7 @@ $(function(){
   });
   
   $(window).scroll(function(){
-    $('.pmain__sidebar__menu__title').each(function(){
+    $('.menu-title').each(function(){
       var targetElement = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -60,5 +60,15 @@ $(function(){
       }
     });
   });
-
+  $(window).scroll(function(){
+    $('.pmain__sidebar__menu__player').each(function(){
+      var targetElement = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > targetElement - windowHeight + 585){
+        $(this).css('opacity','1');
+        $(this).css('transform','translateY(0)');
+      }
+    });
+  });
 });

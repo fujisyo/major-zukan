@@ -109,26 +109,47 @@
             }
           }
         }
-          &__player{
-            font-size: 15px;
-            height: 10%;
-            width: 50%;
-            margin: 0 auto;
-            @include scroll;
-            &__link{
-              color: black;
-              font-size: 20px;
-              &:hover{
-                border-bottom: 1px solid aqua;
-              }
+        &__player{
+          font-size: 15px;
+          height: 10%;
+          width: 50%;
+          margin: 0 auto;
+          @include scroll;
+          &__link{
+            color: black;
+            font-size: 20px;
+            &:hover{
+              border-bottom: 1px solid aqua;
             }
           }
+        }
       }
       &__article{
         // height: 100%;
         width: 100%;
         background-color: lightcoral;
         float: right;
+        &__title{
+          // @include scroll;
+          height: 170px;
+          width: 50%;
+          margin: 20px auto;
+          text-align: center;
+          background: cornsilk;
+          border-radius: 50%;
+          color: #FF6347;
+          &__season{
+            font-size: 50px;
+            font-family: 'arial unicode ms';
+            padding-top: 20px;
+            &__point{
+              font-size: 30px;
+              text-align: right;
+              padding-right: 15px;
+            }
+          }
+        }
+
       }
     }
   }
