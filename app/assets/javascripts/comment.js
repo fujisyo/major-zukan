@@ -33,30 +33,30 @@ $(function(){
       alert('コメントできません');
     });
   });
-  var reloadComments = function() { 
-    if(window.location.href.match(/\/tweets\/\d+\/comments/)){
-      last_comment_id = $(".umain__comment__title__content__name").last().data("comment-id")
-      $.ajax({
-        url: 'api/comments',
-        type: 'GET',
-        dataType: 'json',
-        data: {id: last_comment_id}
-      })
-      .done(function(comments) {
-        var insertHTML = '';
-        $.each(comments, function(i, comment){
-          insertHTML += buildHTML(comment)
-        });
-        if (comments.length != 0){
-        $('.umain__comment__title__content').append(insertHTML);
-        $('.umain__comment__title__content').animate({scrollTop: $('.umain__comment__title__content')[0].scrollHeight});
-        }
-      })
-      .fail(function() {
-        alert("更新できませんでした");
-      });
-    }
-  }
-  setInterval(reloadComments, 7000);
+  // var reloadComments = function() { 
+  //   if(window.location.href.match(/\/tweets\/\d+\/comments/)){
+  //     last_comment_id = $(".umain__comment__title__content__name").last().data("comment-id")
+  //     $.ajax({
+  //       url: 'api/comments',
+  //       type: 'GET',
+  //       dataType: 'json',
+  //       data: {id: last_comment_id}
+  //     })
+  //     .done(function(comments) {
+  //       var insertHTML = '';
+  //       $.each(comments, function(i, comment){
+  //         insertHTML += buildHTML(comment)
+  //       });
+  //       if (comments.length != 0){
+  //       $('.umain__comment__title__content').append(insertHTML);
+  //       $('.umain__comment__title__content').animate({scrollTop: $('.umain__comment__title__content')[0].scrollHeight});
+  //       }
+  //     })
+  //     .fail(function() {
+  //       alert("更新できませんでした");
+  //     });
+  //   }
+  // }
+  // setInterval(reloadComments, 7000);
   
 })
