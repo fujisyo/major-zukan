@@ -1,19 +1,19 @@
-.smain
-  .smain__box
-    %h2.text_aline ログインページ
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      .smain__box__text
-        = f.label :email
-        %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email",class:"smain__box__text__field"
-      .smain__box__text
-        = f.label :password
-        %br/
-        = f.password_field :password, autocomplete: "current-password",class:"smain__box__text__field"
-      - if devise_mapping.rememberable?
-        .smain__box__text
-          = f.check_box :remember_me
-          = f.label :remember_me 
-      .smain__box__text
-        = f.submit "Log in",class:"smain__box__text__submit"
-    = render "devise/shared/links"
+-# .smain
+-#   .smain__box
+-#     %h2.text_aline ログインページ
+-#     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+-#       .smain__box__text
+-#         = f.label :email
+-#         %br/
+-#         = f.email_field :email, autofocus: true, autocomplete: "email",class:"smain__box__text__field"
+-#       .smain__box__text
+-#         = f.label :password
+-#         %br/
+-#         = f.password_field :password, autocomplete: "current-password",class:"smain__box__text__field"
+-#       - if devise_mapping.rememberable?
+-#         .smain__box__text
+-#           = f.check_box :remember_me
+-#           = f.label :remember_me 
+-#       .smain__box__text
+-#         = f.submit "Log in",class:"smain__box__text__submit"
+-#     = render "devise/shared/links"
