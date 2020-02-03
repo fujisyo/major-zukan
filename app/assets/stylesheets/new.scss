@@ -11,6 +11,7 @@
     margin: 0 auto;
     background-color: grey;
     padding: 20px 0;
+    border-radius: 15px;
     &__name{
       height: 50px;
       width: 50%;
@@ -26,11 +27,17 @@
       display: inline-block;
       height: 60%;
       width: 60%;
+      font-size: 30px;
     }
     &__submit{
       display: block;
       width: 30%;
       margin: 0 auto;
+      background: floralwhite;
+      font-size: 30px;
+      margin-top: 25px;
+      border-radius: 15px;
+      cursor: pointer;
     }
   }
   
