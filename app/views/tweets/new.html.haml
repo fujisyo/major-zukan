@@ -5,6 +5,8 @@
   .nmain__box
     = form_for @tweet do |f|
       = f.text_field :name, placeholder: '記事タイトル',class:'nmain__box__name'
-      = f.file_field :image,class:'nmain__box__image'
+      .namin__box__label
+        = f.label :image, "クリックで画像選択",class: "nmain__box__label__text"
+        = f.file_field :image,class:'nmain__box__label__image'
       = f.text_area :text, placeholder: "記事入力欄",class:'nmain__box__text'
       = f.submit '投稿する', class:'nmain__box__submit'
