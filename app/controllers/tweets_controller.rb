@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, except: [:index,:show]
 
   def index
-    @tweets = Tweet.all.includes(:user).limit(8).order('created_at DESC')
+    @tweets = Tweet.all.includes(:user).limit(6).order('created_at DESC')
   end
   def new
     @tweet = Tweet.new
