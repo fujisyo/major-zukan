@@ -3,9 +3,12 @@
     .header__image__logo
       = link_to 'MLBNETWORK',root_path,class:'mlb'
     .header__image__form
-      -if user_signed_in? 
+      -if user_signed_in? && current_user.id == @tweet.user_id
         = link_to "編集する","/tweets/#{@tweet.id}/edit",class:'link'
-        = link_to "削除する","/tweets/#{@tweet.id}", method: :delete,class:'link'
+        = link_to "削除する","/tweets/#{@tweet.id}", method: :delete,class:'link' 
+      - elsif user_signed_in?
+        = link_to "投稿する",new_tweet_path,class:'link'
+        = link_to "ログアウト",destroy_user_session_path, method: :delete,class:'link'
       - else
         = link_to "ログイン",user_session_path,class: 'link'
         = link_to "新規登録",new_user_registration_path,class:'link'
