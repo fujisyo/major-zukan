@@ -38,9 +38,10 @@ class TweetsController < ApplicationController
 
   def destroy
     @tweet = Tweet.find(params[:id])
-    if @tweet.destroy
-      redirect_to root_path
-    end
+      if @tweet.user_id == current_user.id
+        @tweet.destroy #destroyメソッドを使用し対象のツイートを削除する。
+        redirect_to(root_path)
+      end
   end
 
 
