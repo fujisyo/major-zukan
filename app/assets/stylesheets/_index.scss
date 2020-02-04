@@ -6,7 +6,8 @@
   width: 95%;
   padding-top: 20px;
   margin: 0 auto;
-  background-color: lightslategrey;
+  background-color: azure;
+  border-radius: 30px;
   &__title{
     font-size: 40px;
     text-align: center;
@@ -23,7 +24,7 @@
       height: 100px;
       width: calc(100vw - 350px);
       margin: 30px auto;
-      background-color: aliceblue;
+      background-color: whitesmoke;
       display: flex;
       border-radius: 20px;
       cursor: pointer;
@@ -40,7 +41,7 @@
         padding: 0 20px;
         color: black;
         &__link{
-          color: blanchedalmond;
+          color: aquamarine;
           position: absolute;
           right: 1%;
           bottom: 10%;

@@ -16,7 +16,7 @@
             =link_to root_path, class:"tmain__box__tweet__name" do
               %i.fa.fa-smile-o
               .tmain__box__tweet__name__link
-              = t.user.nickname
+                = t.user.nickname
   .pmain
     .pmain__title
       MLB情報
@@ -45,6 +45,11 @@
             2020シーズン
             .pmain__sidebar__article__title__season__point
               注目ポイント！！
+        .pmain__sidebar__article__name
+          =link_to "大型契約をしたコールの成績[MLB.com(引用)]","https://www.mlb.com/player/gerrit-cole-543037",class:".pmain__sidebar__article__name__link"
+          .pmain__sidebar__article__name__image
+            = image_tag "/ヤンキース.jpeg",alt: "test",class:'article__image__phote'
+          
 
 
               
