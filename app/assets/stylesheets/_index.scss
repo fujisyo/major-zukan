@@ -12,12 +12,16 @@
     font-size: 40px;
     text-align: center;
     padding-bottom: 10px;
+    @include border_html;
+    &::before,&::after{
+      @include before_after_border;
+    }
   }
   &__box{
     height: 820px;
     width: calc(100vw - 300px);
     margin: 0 auto;
-    background-color: grey;
+    background-color: lavender;
     padding-top: 10px;
     margin-bottom: 10px;
     &__tweet{
@@ -68,6 +72,10 @@
       text-align: center;
       padding: 10px 0;
       @include scroll;
+      @include border_html;
+      &::before,&::after{
+        @include before_after_border;
+      }
     }
     .slider{
       width: 100%;
@@ -129,7 +137,7 @@
       &__article{
         // height: 100%;
         width: 100%;
-        background-color: lightcoral;
+        background-color: whitesmoke;
         float: right;
         &__title{
           @include scroll;
@@ -154,7 +162,7 @@
         &__name{
           margin: 30px 0 10px 20px;
           &__link{
-            color: cornsilk;
+            color: black;
             font-size: 20px;
           }
         }

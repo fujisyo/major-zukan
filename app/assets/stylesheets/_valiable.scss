@@ -3,3 +3,16 @@
   transform: translateY(20px);
   transition: all 1s;
 }
+
+@mixin border_html {
+  display: flex;
+  align-items: center;
+}
+
+@mixin before_after_border {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: #444;
+  display: block;  
+}
