@@ -1,7 +1,7 @@
 .header
   .header__image
     .header__image__logo
-      = link_to 'MLBNETWORK',root_path,class:'mlb'
+      = link_to 'MLBサイト',root_path,class:'mlb'
     .header__image__form
       -if user_signed_in? && current_user.id == @tweet.user_id
         = link_to "編集する","/tweets/#{@tweet.id}/edit",class:'link'
