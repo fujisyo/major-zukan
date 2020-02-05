@@ -89,7 +89,7 @@
     background-color: #38aef0;
     cursor: pointer;
     &:hover{
-      opacity: 80%;
+      @include hover_opacity;
     }
   }
 

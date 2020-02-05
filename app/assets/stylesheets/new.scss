@@ -2,6 +2,7 @@
   height: 1000px;
   width: 100%;
   text-align: center;
+  background-image: image-url("/CorkBoard.jpg");
   &__title{
     font-size: 60px;
   }
@@ -9,7 +10,6 @@
     height: 90%;
     width: calc(100vw - 300px);
     margin: 0 auto;
-    background-color: grey;
     padding: 20px 0;
     border-radius: 15px;
     &__name{
@@ -20,6 +20,7 @@
     }
     &__label{
       height: 120px;
+      
       &__text{
         font-size: 30px;
         border: 1px solid;
@@ -27,6 +28,10 @@
         background: aliceblue;
         padding: 10px;
         line-height: 120px;
+        cursor: pointer;
+        &:hover{
+          @include hover_opacity;
+        }
       }
       &__image{
         display: block;
@@ -51,6 +56,9 @@
       margin-top: 25px;
       border-radius: 15px;
       cursor: pointer;
+      &:hover{
+        @include hover_opacity;
+      }
     }
   }
   

@@ -16,3 +16,7 @@
   background: #444;
   display: block;  
 }
+
+@mixin hover_opacity {
+  opacity: 80%;
+}
