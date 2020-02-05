@@ -1,7 +1,7 @@
 
 .header__image
   .header__image__logo
-    = link_to '-MLBサイト-',root_path,class:'mlb'
+    = link_to 'MLBサイト',root_path,class:'mlb'
   .header__image__form
     -if user_signed_in? 
       = link_to "投稿する",new_tweet_path,class:'link'
