@@ -3,12 +3,11 @@
   text-decoration: none;
 }
 .tmain{
-  background-image: image-url("/unnamed.jpg");
-  width: 95%;
+  background-image: image-url("/CorkBoard.jpg");
+  width: 100%;
   padding-top: 20px;
   margin: 0 auto;
   background-color: azure;
-  border-radius: 30px;
   &__title{
     font-size: 40px;
     text-align: center;
@@ -22,7 +21,6 @@
     height: 820px;
     width: calc(100vw - 300px);
     margin: 0 auto;
-    background-color: lavender;
     padding-top: 10px;
     margin-bottom: 10px;
     &__tweet{
@@ -91,7 +89,7 @@
     &__sidebar{
       height: 100%;
       width: 100%;
-      background-color: lightslategrey;
+      background-image: image-url("/CorkBoard.jpg");
       display: flex;
       &__menu{
         width: 20%;
@@ -109,7 +107,7 @@
           width: 90%;
           margin: 0 auto;
           border: 1px solid;
-          background: honeydew;
+          // background: honeydew;
           margin-bottom: 10px;
           border-radius: 10px;
           @include scroll;
@@ -138,7 +136,7 @@
       &__article{
         // height: 100%;
         width: 100%;
-        background-color: whitesmoke;
+        background-image: image-url("/CorkBoard.jpg");
         float: right;
         &__title{
           @include scroll;
