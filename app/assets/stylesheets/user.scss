@@ -87,6 +87,10 @@
     margin-top: 20px;
     color: #fff;
     background-color: #38aef0;
+    cursor: pointer;
+    &:hover{
+      opacity: 80%;
+    }
   }
 
   .field-label {
