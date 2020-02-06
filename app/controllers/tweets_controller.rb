@@ -1,8 +1,8 @@
 class TweetsController < ApplicationController
 
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show, :destroy]
   before_action :move_to_index, except: [:index,:show]
-  before_action :move_to_user, only: [:edit,:destroy]
+  # before_action :move_to_user, only: [:edit,:destroy]
   def index
     @tweets = Tweet.all.includes(:user).limit(6).order('created_at DESC')
   end
@@ -37,8 +37,8 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet = Tweet.find(params[:id])
     @tweet.destroy
+    redirect_to(root_path)
   end
 
 
@@ -56,9 +56,5 @@ class TweetsController < ApplicationController
     redirect_to action: :index unless user_signed_in?
   end
 
-  def move_to_user
-    unless user_signed_in? && current_user.id == @tweet.user_id
-      redirect_to(root_path) 
-    end
-  end 
+  
 end
