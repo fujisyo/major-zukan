@@ -33,6 +33,7 @@ $(function(){
     })
     .fail(function(){
       alert('コメントできません');
+      $('.umain__comment__field__submit').prop('disabled', false);
     });
   });
 })
