@@ -60,7 +60,7 @@ class TweetsController < ApplicationController
   end
 
   def move_to_user
-    if user_signed_in? && current_user.id == @tweet.user_id
+    unless user_signed_in? && current_user.id
       redirect_to(new_user_registration_path) 
     end
   end 
