@@ -28,6 +28,8 @@ $(function(){
       $('.umain__comment__title__content').append(html);
       $('.umain__comment__field__text').val('');
       $('.umain__comment__field__submit').prop('disabled', false);
+      $('.umain__comment__title__content').animate({ scrollTop: $('.umain__comment__title__content')[0].scrollHeight});
+      return false
     })
     .fail(function(){
       alert('コメントできません');
